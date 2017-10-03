@@ -1,0 +1,42 @@
+.usp-container {
+    text-align: center;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        margin-bottom: 0px;
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    .icon-chart {
+        background-size: auto 125px;
+    }
+
+    .icon-code {
+    background-size: auto 80px;
+}
+
+.icon-wand {
+    background-size: auto 110px;
+}
+}
+
+.usp-header {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-size: ms(1);
+}
+
+.usp-icon {
+    height: 150px;
+    background-repeat: no-repeat;
+    margin-bottom: 1.4rem;
+    background-position: center center;
+}
+
+.usp-p {
+    line-height: 2;
+}

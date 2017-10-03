@@ -1,0 +1,75 @@
+.highlight-masonry {
+    transition: all .5s ease-in-out;
+    -moz-column-fill: initial;
+    -webkit-column-fill: initial;
+    column-fill: initial;
+
+    @media screen and (min-width: 600px) {
+        column-count: 2;
+        column-gap: $gutter;
+    }
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        column-count: 3;
+        column-gap: $gutterMd;
+    }
+
+    @media screen and (min-width: $tablet-landscape-upper-boundary) {
+        column-gap: $gutterLrg;
+    }
+}
+
+.highlight {
+    max-width: 100%;
+    text-indent: 1em;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+
+    &.high {
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            height: 575px;
+        }
+    }
+
+    &.low {
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            height: 225px;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        margin-bottom: $gutter;
+
+        &:hover:after {
+            background: rgba(0, 0, 0, .75);
+            content: '';
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+        }
+    }
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        margin-bottom: $gutterMd;
+    }
+
+    @media screen and (min-width: $tablet-landscape-upper-boundary) {
+        margin-bottom: $gutterLrg;
+    }
+}
+
+.highlight-caption {
+    z-index: 1;
+    color: #fff;
+}

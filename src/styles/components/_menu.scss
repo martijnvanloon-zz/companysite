@@ -1,0 +1,128 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 61px;
+    align-items: center;
+
+    &:before {
+        content: '';
+        height: 5px;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        background-color: $primary-color;
+    }
+
+    .logo {
+        margin: 0;
+        height: 30px;
+        margin-left: 1.5rem;
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            height: auto;
+            margin-top: auto;
+        }
+    }
+}
+
+.menu-navigation {
+    position: absolute;
+    top: 90px;
+    max-height: 0;
+    transition: all .3s ease;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+
+    &.is-active {
+        max-height: 100vh;
+        border-bottom: 3px solid $primary-color;
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            border-bottom: 0 solid $primary-color;
+            max-height: none;
+        }
+    }
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: auto;
+        max-height: none;
+        top: 0;
+        background: transparent;
+        width: auto;
+    }
+}
+
+.navigation-list {
+    display: block;
+    padding-bottom: 2rem;
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        list-style: none;
+        display: flex;
+        padding-bottom: 0;
+    }
+
+    li {
+        padding: 0 26px;
+        font-size: ms(1);
+        line-height: 2.5;
+        text-transform: uppercase;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            font-size: ms(0);
+            line-height: 2;
+            padding: 0 1rem;
+        }
+    }
+}
+
+.navigation-language {
+    @media screen and (max-width: $tablet-portrait-upper-boundary) {
+        margin-top: 20px;
+
+        &:before {
+            content: '';
+            height: 2px;
+            width: 100px;
+            background: $font-secondary;
+            display: block;
+            margin: auto;
+            margin-bottom: 26px;
+        }
+    }
+}
+
+.hamburger {
+    display: block;
+    padding: 0;
+    padding-right: 1.5rem;
+    height: 24px;
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        display: none;
+    }
+
+    .hamburger-inner {
+        background: #333;
+
+        &:before,
+        &:after {
+            background: #333;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+.hero {
+    position: relative;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 14rem 0;
+
+    .hero-svg-top,
+    .hero-svg-bottom {
+        position: absolute;
+        width: 100%;
+        height: 2rem;
+
+        @media screen and (min-width: $phone-upper-boundary) {
+            height: 4rem;
+        }
+        /* set height to pixels if you want angle to change with screen width */
+    }
+
+    .hero-svg-top {
+        // minus to protect from bg leaking
+        top: -2px;
+        transform: rotate(180deg);
+    }
+
+    .hero-svg-bottom {
+        // minus to protect from bg leaking
+        bottom: -2px;
+    }
+
+
+    .hero-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .hero-title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: ms(4);
+        border-bottom: 2px solid #fff;
+        width: fit-content;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            font-size: ms(5);
+        }
+    }
+
+    .hero-subtitle {
+        font-size: ms(1);
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            width: 70%;
+        }
+    }
+}
+
+.quote-box {
+    align-items: initial;
+    height: auto;
+    padding: 50px 0;
+}
+
+.quote-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:before {
+        content: '';
+        width: 100%;
+        order: 2;
+    }
+}
+
+.quote-title {
+    margin-bottom: $gutterMd;
+    font-size: ms(2);
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        order: 1;
+    }
+}
+
+.personalia {
+    display: flex;
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        display: block;
+        order: 3;
+    }
+
+    img {
+        max-width: 100%;
+        height: 100px;
+        margin-right: $gutter;
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            height: 150px;
+            margin-right: $gutterLrg;
+        }
+
+        @media screen and (min-width: $tablet-landscape-upper-boundary) {
+            margin-right: 100px;
+        }
+    }
+}
+
+.personalia-caption {
+    strong {
+        line-height: 2;
+    }
+}
+
+.big-quote {
+    margin-bottom: $gutter;
+    line-height: 2;
+    font-size: ms(1);
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        order: 4;
+        width: calc(100% - 195px);
+    }
+
+    @media screen and (min-width: $tablet-landscape-upper-boundary) {
+        order: 4;
+        width: calc(100% - 250px);
+    }
+
+    @media screen and (min-width: $tablet-portrait-upper-boundary) {
+        order: 4;
+        width: calc(100% - 195px);
+    }
+
+    @media screen and (min-width: $tablet-landscape-upper-boundary) {
+        order: 4;
+        width: calc(100% - 250px);
+    }
+
+    &:before,
+    &:after {
+        content: '" ';
+        display: block;
+        font-size: ms(5);
+        line-height: 1;
+        color: $primary-color;
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    &:after {
+        text-align: right;
+        margin-top: -20px;
+        margin-right: 20px;
+
+        @media screen and (min-width: $tablet-portrait-upper-boundary) {
+            margin-right: 0;
+        }
+    }
+
+    &:before {
+        margin-bottom: -20px;
+
+        @media screen and (min-width: $tablet-landscape-upper-boundary) {
+            margin-left: -45px;
+        }
+    }
+}
+
+

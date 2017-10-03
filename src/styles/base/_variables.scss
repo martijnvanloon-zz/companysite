@@ -1,0 +1,20 @@
+@import '~modularscale-sass/stylesheets/modularscale';
+
+// font sizing
+$modularscale: (base: 1rem, ratio: 1.333);
+
+// colors
+$primary-color: #ff6029;
+$font-main: #444;
+$font-secondary: #a8a8a8;
+/*breakpoints*/
+$phone-smallest-boundary: 450px !default;
+$phone-upper-boundary: 600px !default;
+$tablet-portrait-upper-boundary: 900px !default;
+$tablet-landscape-upper-boundary: 1200px !default;
+$desktop-upper-boundary: 1800px !default;
+// margins
+$block-margin: 6.6rem;
+$gutter: 20px;
+$gutterMd: 30px;
+$gutterLrg: 45px;

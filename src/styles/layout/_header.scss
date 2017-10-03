@@ -1,0 +1,17 @@
+.intro {
+    margin: $block-margin * 1.5 auto $block-margin auto;
+}
+
+.intro-title {
+    font-size: ms(1);
+    margin-bottom: ms(1);
+    color: $font-secondary;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    font-size: ms(2);
+    line-height: 1.8;
+}
+

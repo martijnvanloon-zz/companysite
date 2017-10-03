@@ -1,0 +1,25 @@
+// max widths
+
+.text-width {
+    padding: 0 15px;
+
+    @media screen and (min-width: $phone-upper-boundary) {
+        width: 80%;
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+.max-width {
+    padding: 0 15px;
+    
+    @media screen and (min-width: $phone-upper-boundary) {
+        width: 90%;
+        max-width: 1340px;
+        margin: auto;
+    }
+}
+
+.center {
+    text-align: center;
+}

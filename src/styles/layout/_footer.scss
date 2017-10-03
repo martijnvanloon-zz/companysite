@@ -1,0 +1,42 @@
+.footer {
+    border-top: 1px solid $font-secondary;
+    padding: 50px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @media screen and (min-width: $phone-upper-boundary) {
+        flex-direction: row;
+    }
+
+    .logo {
+        margin: auto;
+        height: 30px;
+
+        @media screen and (min-width: $phone-upper-boundary) {
+            margin: 0;
+        }
+    }
+
+    .navigation-list {
+        text-align: center;
+        margin: auto;
+        padding-top: $gutter;
+        
+
+        @media screen and (min-width: $phone-upper-boundary) {
+            text-align: left;
+            margin: 0;
+            padding-top: 0;
+            font-size: ms(0);
+        }
+
+        li {
+            align-self: center;
+        }
+    }
+}
